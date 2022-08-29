@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+</head>
+<body>
+    <div class="container">
+        <div class="rows" id="left_row">
+            <div id="background">
+            <img src="/logo.png" alt="logo">
+            <h1>ODIN</h1>
+            </div>
+        </div>
+        <div class="rows" id="right_row">
+            <div id="header">
+                <h3>This is not a real online service! You know you need something like this in your life to help you to realize your deepest dreams.<br> Sign up <i>now</i> to get started.</i> </h3>
+                <h3>You <i>know</i> you want to!</h3>
+            </div>
+            <form action="#" id="form1">
+                <div id="form">
+                    <h1>Let's do this!</h1>
+                    <h1></h1>
+                        <div class="inputs">
+                            <label>First Name</label>
+                            <input type="text" name="first_name" for="fname">
+                        </div>
+                        <div class="inputs">
+                            <label>Last Name</label>
+                            <input type="text" name="last_name" for="lname">
+                        </div>
+                        <div class="inputs">
+                            <label>Email</label>
+                            <input type="email" name="email" for="email">
+                        </div>
+                        <div class="inputs">
+                            <label>Phone Number</label>
+                            <input type="tel" name="phone_number" for="phoneN">
+                        </div>
+                        <div class="inputs">
+                            <label>Password</label>
+                            <input type="password" onchange="button_pressed()" name="pass_one" id="pass1">
+                            <legend style="color: red; display: none;" id="leg1">*Not the same password</legend>
+                        </div>
+                        <div class="inputs">
+                            <label>Password</label>
+                            <input type="password" onchange="button_pressed()" name="pass_two" id="pass2">
+                            <legend style="color: red; display: none;" id="leg2">*Not the same password</legend>
+                        </div>
+                </div>
+                <button type="submit" id="button">Create account</button>
+            </form>
+            <p>Already have an account? <a href="/log_in">Log in</a></p>
+        </div>
+    </div>
+</body>
+<footer>
+    <script>
+        pass1 = document.getElementById("pass1");
+        pass2 = document.getElementById("pass2");
+        legend1 = document.getElementById("leg1");
+        legend2 = document.getElementById("leg2");
+        button = document.getElementById("button");
+        function button_pressed(){
+            if(pass1.value != pass2.value){
+                legend1.style.display = "block";
+                legend1.style.display = "block";
+                button.disabled = true;
+            }
+            if(pass1.value == pass2.value){
+                legend1.style.display = "none";
+                legend1.style.display = "none";
+                button.disabled = false;
+            }
+        }
+    </script>
+</footer>
+</html>
