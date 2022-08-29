@@ -15,7 +15,7 @@ body{
 }
 #left_row{
     padding: 250px 0px 500px 0px;
-    background-image: url("/bg.webp");
+    background-image: url("bg.webp");
     background-size: cover;
     background-repeat: no-repeat;
 }
